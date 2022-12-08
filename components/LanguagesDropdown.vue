@@ -2,42 +2,43 @@
   <a-dropdown>
     <template #overlay>
       <a-menu @click="handleMenuClick">
-        <a-menu-item key="vi">
-          <UserOutlined />
+        <a-menu-item key="vi" class="item-dropdown">
+          <VNFlagIcon />
           Tiếng Việt
         </a-menu-item>
-        <a-menu-item key="en">
-          <UserOutlined />
+        <a-menu-item key="en" class="item-dropdown">
+          <USFlagIcon />
           English
         </a-menu-item>
       </a-menu>
     </template>
-    <a-button class="app-button"> Button </a-button>
+    <a-button class="app-button">
+      <VNFlagIcon />
+      <DownIcon />
+    </a-button>
   </a-dropdown>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import {
-  HomeOutlined,
-  SettingFilled,
-  SmileOutlined,
-  SyncOutlined,
-  LoadingOutlined,
-} from "@ant-design/icons-vue";
+import VNFlagIcon from "~/assets/svg/VNFlagIcon.vue";
+import USFlagIcon from "~/assets/svg/USFlagIcon.vue";
+import DownIcon from "~/assets/svg/DownIcon.vue";
 export default defineComponent({
   components: {
-    HomeOutlined,
-    SettingFilled,
-    SmileOutlined,
-    SyncOutlined,
-    LoadingOutlined,
+    VNFlagIcon,
+    USFlagIcon,
+    DownIcon,
+  },
+  state: {
+    lang: "vi",
   },
   setup() {
     const handleButtonClick = (e) => {
       console.log("click left button", e);
     };
     const handleMenuClick = (e) => {
+      this.state.lang = e.key;
       console.log("click", e);
     };
     return {
@@ -57,7 +58,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.item-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .app-button {
-  background-color: red;
+  border: none;
+  display: flex;
+  align-items: center;
 }
 </style>
