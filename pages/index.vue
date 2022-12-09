@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="app">
+      <Header></Header>
       <LanguagesDropdown />
     </div>
     <!-- <Tutorial /> -->
@@ -9,7 +10,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import LanguagesDropdown from "~/components/LanguagesDropdown.vue";
+import Header from "~/components/Header.vue";
 export default Vue.extend([
   {
     name: "IndexPage",

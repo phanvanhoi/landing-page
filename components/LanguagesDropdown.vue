@@ -1,8 +1,8 @@
 <template>
-  <a-dropdown>
+  <a-dropdown id="container">
     <template #overlay>
-      <a-menu @click="handleMenuClick">
-        <a-menu-item key="vi" class="item-dropdown">
+      <a-menu @click="handleMenuClick" id="menu-item-container">
+        <a-menu-item key="vi" class="item-dropdown bg-b">
           <VNFlagIcon />
           Tiếng Việt
         </a-menu-item>
@@ -24,21 +24,19 @@ import { defineComponent } from "vue";
 import VNFlagIcon from "~/assets/svg/VNFlagIcon.vue";
 import USFlagIcon from "~/assets/svg/USFlagIcon.vue";
 import DownIcon from "~/assets/svg/DownIcon.vue";
+import DoneIcon from "~/assets/svg/DoneIcon.vue";
 export default defineComponent({
   components: {
     VNFlagIcon,
     USFlagIcon,
     DownIcon,
   },
-  state: {
-    lang: "vi",
-  },
   setup() {
     const handleButtonClick = (e) => {
       console.log("click left button", e);
     };
     const handleMenuClick = (e) => {
-      this.state.lang = e.key;
+      this.$store.commit('SET_LANG', e.key)
       console.log("click", e);
     };
     return {
@@ -58,15 +56,36 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.item-dropdown {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.app-button {
+#container {
+  background: none;
   border: none;
   display: flex;
   align-items: center;
+  gap: 15px;
+
+  .ant-btn {
+    border-color: none;
+  }
+}
+
+#menu-item-container {
+  padding: 10px;
+
+  .item-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: none;
+  }
+
+  .app-button {
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .bg-b {
+    border-bottom: 1px solid #C4C4C4;
+  }
 }
 </style>

@@ -3,6 +3,9 @@
     "lang": "English"
   },
   "header": {
-    "title": "title"
+    "about": "ABOUT US",
+    "games": "GAMES",
+    "partners": "PARTNERS",
+    "contact": "CONTACT US"
   }
 }
