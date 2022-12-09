@@ -1,10 +1,7 @@
 <template>
-  <div
-    id="header"
-    :style="{
-      'background-image': `url(${require('../assets/img/BackgoundImage.png')})`,
-    }"
-  >
+  <div id="header" :style="{
+    'background-image': `url(${require('../assets/img/BackgoundImage.png')})`,
+  }">
     <div id="logo">
       <LogoIcon />
     </div>
@@ -12,20 +9,24 @@
       <MenuHeader />
       <LanguagesDropdown />
     </div>
-    <div
-      id="fairy-container"
-      :style="{
-        'background-image': `url(${require('../assets/img/Fairy.png')})`,
-      }"
-    ></div>
+    <div id="fairy-container" :style="{
+      'background-image': `url(${require('../assets/img/Fairy.png')})`,
+    }"></div>
+    <div id="countdown-container">
+      <div id="countdown-container-content">
+        <h1 id="description-games">Trò chơi sắp ra mắt</h1>
+        <CountDown></CountDown>
+      </div>
+    </div>
   </div>
 </template>
-
+  
 <script>
 import { defineComponent } from "vue";
 import LogoIcon from "~/assets/svg/LogoIcon.vue";
 import MenuHeader from "~/components/MenuHeader.vue";
 import LanguagesDropdown from "~/components/LanguagesDropdown.vue";
+import CountDown from "~/components/CountDown.vue";
 export default defineComponent({
   components: {
     LogoIcon,
@@ -43,7 +44,7 @@ export default defineComponent({
   },
 });
 </script>
-
+  
 <style lang="scss">
 #header {
   position: relative;
@@ -55,8 +56,38 @@ export default defineComponent({
 
   #logo {
     position: absolute;
-    top: 20px;
-    left: 79px;
+    top: calc(100vw * (1 / 24 / 4));
+    left: calc(100vw * (1 / 24));
+  }
+
+  #countdown-container {
+    margin: auto;
+    width: calc(100vw * (1 / 2));
+    height: calc(100vw * (1 / 2));
+    display: flex;
+    align-items: end;
+    z-index: 1;
+
+    #countdown-container-content {
+      width: 100%;
+      height: calc(100vw * (1 / 4));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #description-games {
+        font-size: calc(100vw * (1 / 24));
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120px;
+        text-align: center;
+        letter-spacing: 0.6px;
+        color: #FFFFFF;
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   #menu-header-container {
@@ -66,7 +97,8 @@ export default defineComponent({
     display: flex;
     align-items: center;
     gap: 31px;
-    height: auto;
+    height: 100px;
+    padding-right: calc(100vw * (1 / 24) - 20px);
 
     .ant-menu {
       background: none;
@@ -82,7 +114,7 @@ export default defineComponent({
       }
 
       .ant-menu-item,
-      .ant-menu-horizontal > .ant-menu-submenu {
+      .ant-menu-horizontal>.ant-menu-submenu {
         border-bottom: none;
       }
 
@@ -104,3 +136,4 @@ export default defineComponent({
   }
 }
 </style>
+  

@@ -21,7 +21,7 @@ export default {
   css: ["ant-design-vue/dist/antd.css", "~/assets/styles/variables.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/antd-ui", "plugins/i18n.js"],
+  plugins: ["@/plugins/antd-ui", "@/plugins/i18n.js","@/plugins/vuejs-countdown-timer.js"],
   router: {
     middleware: ["i18n"],
   },
