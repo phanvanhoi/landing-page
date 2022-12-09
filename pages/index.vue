@@ -2,7 +2,6 @@
   <div>
     <div id="app">
       <Header></Header>
-      <LanguagesDropdown />
     </div>
     <!-- <Tutorial /> -->
   </div>

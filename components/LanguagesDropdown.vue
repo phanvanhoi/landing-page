@@ -1,8 +1,10 @@
 <template>
   <a-dropdown id="container">
     <template #overlay>
-      <a-menu @click="handleMenuClick" id="menu-item-container">
+      <a-menu @click="changeLanguages" id="menu-item-container">
         <a-menu-item key="vi" class="item-dropdown bg-b">
+          {{ locale }}
+          <DoneIcon />
           <VNFlagIcon />
           Tiếng Việt
         </a-menu-item>
@@ -25,18 +27,19 @@ import VNFlagIcon from "~/assets/svg/VNFlagIcon.vue";
 import USFlagIcon from "~/assets/svg/USFlagIcon.vue";
 import DownIcon from "~/assets/svg/DownIcon.vue";
 import DoneIcon from "~/assets/svg/DoneIcon.vue";
+import { mapState, mapActions } from "vuex";
 export default defineComponent({
   components: {
     VNFlagIcon,
     USFlagIcon,
     DownIcon,
+    DoneIcon,
   },
   setup() {
     const handleButtonClick = (e) => {
       console.log("click left button", e);
     };
     const handleMenuClick = (e) => {
-      this.$store.commit('SET_LANG', e.key)
       console.log("click", e);
     };
     return {
@@ -44,12 +47,15 @@ export default defineComponent({
       handleMenuClick,
     };
   },
+  computed: {
+    ...mapState({
+      locale: (state) => state.locale,
+    }),
+  },
   methods: {
-    changeLang(lang) {
-      this.$store.commit("SET_LANG", lang);
-      this.$router.push({
-        path: `${this.$router.currentRoute.path}?lang=${lang}`,
-      });
+    ...mapActions(["changLanguages"]),
+    handleMenuClick() {
+      this.changLanguages("vi");
     },
   },
 });
@@ -74,6 +80,7 @@ export default defineComponent({
   .item-dropdown {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 15px;
     background: none;
   }
@@ -85,7 +92,7 @@ export default defineComponent({
   }
 
   .bg-b {
-    border-bottom: 1px solid #C4C4C4;
+    border-bottom: 1px solid #c4c4c4;
   }
 }
 </style>
