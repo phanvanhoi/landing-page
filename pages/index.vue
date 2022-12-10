@@ -4,6 +4,7 @@
       <Header></Header>
       <About></About>
       <AnimationImageGames></AnimationImageGames>
+      <Game></Game>
     </div>
     <!-- <Tutorial /> -->
   </div>
@@ -14,6 +15,7 @@ import Vue from "vue";
 import Header from "~/components/Header.vue";
 import About from "~/components/About.vue";
 import AnimationImageGames from "~/components/AnimationImageGames.vue";
+import Game from "~/components/Game.vue";
 export default Vue.extend([
   {
     name: "IndexPage",

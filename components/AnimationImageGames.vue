@@ -22,7 +22,7 @@ export default defineComponent({
     },
     data() {
         return {
-            imgIllustrator: require('~/static/Illustrator.png'),
+            imgIllustrator: require('~/static/Illustrator.gif'),
             imgMap: require('~/static/Map.png'),
         }
     },
