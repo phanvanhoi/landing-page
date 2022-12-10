@@ -9,7 +9,7 @@
 
     </div>
 </template>
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue';
 import Carousel from '~/components/Carousel.vue'
 import CarouselSlide from '~/components/CarouselSlide.vue'
