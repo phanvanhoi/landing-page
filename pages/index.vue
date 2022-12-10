@@ -3,6 +3,7 @@
     <div id="app">
       <Header></Header>
       <About></About>
+      <AnimationImageGames></AnimationImageGames>
     </div>
     <!-- <Tutorial /> -->
   </div>
@@ -12,6 +13,7 @@
 import Vue from "vue";
 import Header from "~/components/Header.vue";
 import About from "~/components/About.vue";
+import AnimationImageGames from "~/components/AnimationImageGames.vue";
 export default Vue.extend([
   {
     name: "IndexPage",

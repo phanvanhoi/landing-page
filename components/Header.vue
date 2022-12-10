@@ -1,6 +1,6 @@
 <template>
   <div id="header" :style="{
-    'background-image': `url(${require('../assets/img/BackgoundImage.png')})`,
+    'background-image': `url(${require('../static/BackgoundImage.png')})`,
   }">
     <div id="logo">
       <LogoIcon />
@@ -10,7 +10,7 @@
       <LanguagesDropdown />
     </div>
     <div id="fairy-container" :style="{
-      'background-image': `url(${require('../assets/img/Fairy.png')})`,
+      'background-image': `url(${require('../static/Fairy.png')})`,
     }"></div>
     <div id="countdown-container">
       <div id="countdown-container-content">
