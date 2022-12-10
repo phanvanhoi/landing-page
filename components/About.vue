@@ -34,15 +34,45 @@
                 </div>
             </div>
             <div class="flex-1 left-about-container">
-                <div class="left-about-content-container">
-                    <!-- icon -->
-                    <div class="about-icon-container">
-                        <CalendarTickIcon />
+                <div class="left-about-padding-container">
+                    <div class="left-about-content-container">
+                        <!-- icon -->
+                        <div class="about-icon-container">
+                            <CalendarTickIcon />
+                        </div>
+                        <!-- Content -->
+                        <div class="left-about-content-detail-container">
+                            <h1>Truy Cập 24/7</h1>
+                            <h5>Đảm bảo hoạt động kinh doanh của các nhà khai thác hoạt động trơn tru suốt cả năm.</h5>
+                        </div>
                     </div>
-                    <!-- Content -->
-                    <div>
-                        <h1>Truy Cập 24/7</h1>
-                        <h5>Đảm bảo hoạt động kinh doanh của các nhà khai thác hoạt động trơn tru suốt cả năm.</h5>
+                    <div class="left-about-content-container">
+                        <!-- icon -->
+                        <div class="about-icon-container">
+                            <PenToolIcon />
+                        </div>
+                        <!-- Content -->
+                        <div class="left-about-content-detail-container">
+                            <h1>Thiết Kế</h1>
+                            <h5>Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò
+                                chơi
+                                của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo.
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="left-about-content-container">
+                        <!-- icon -->
+                        <div class="about-icon-container">
+                            <PeopleIcon />
+                        </div>
+                        <!-- Content -->
+                        <div class="left-about-content-detail-container">
+                            <h1>Đội Ngũ</h1>
+                            <h5>Etech là một studio quốc tế, từng đoạt giải thưởng gồm các nhà thiết kế, nghệ sĩ, họa sĩ
+                                hoạt hình và nhà sản xuất chuyên tạo ra nội dung cho những tên tuổi lớn nhất trong lĩnh
+                                vực
+                                điện ảnh và trò chơi điện tử.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,6 +133,7 @@ export default defineComponent({
             .about-descripstion {
                 font-size: calc(100vw * (1 /137.142857143));
                 margin-bottom: calc(100vw * (1 / 24));
+                font-weight: 400;
             }
 
             .number-of-people-container {
@@ -158,24 +189,42 @@ export default defineComponent({
 
         .left-about-container {
             background: #EEEEEE;
-            padding: calc(100vw * (1 / 17)) calc(100vw * (1 / 25.6));
 
-            .left-about-content-container {
-                .about-icon-container {
-                    width: calc(100vw / 30);
-                    height: calc(100vw / 30);
-                    background: #E3FCFF;
-                    border-radius: 50%;
+            .left-about-padding-container {
+                padding: calc(100vw * (1 / 17)) calc(100vw * (1 / 25.6));
+                display: flex;
+                flex-direction: column;
+                gap: calc(100vw * (1 / 24 / 2));
+
+                .left-about-content-container {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    gap: calc(100vw / 70);
+
+                    .about-icon-container {
+                        width: calc(100vw / 30);
+                        height: calc(100vw / 30);
+                        background: #E3FCFF;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .left-about-content-detail-container {
+                        flex: 1;
+
+                        h1 {
+                            font-weight: bold;
+                        }
+
+                        h5 {
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
 
-
         }
-
-
     }
 
 }
