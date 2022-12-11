@@ -3,7 +3,7 @@
     'background-image': `url(${require('../static/BackgoundImage.png')})`,
   }">
     <div id="logo">
-      <LogoIcon :width="150"/>
+      <LogoIcon :width="150" />
     </div>
     <div id="menu-header-container">
       <MenuHeader />
@@ -62,6 +62,12 @@ export default defineComponent({
 </script>
   
 <style lang="scss">
+@media only screen and (max-width: 992px) {
+  header {
+    background-color: lightblue;
+  }
+}
+
 #header {
   position: relative;
   width: 100vw;

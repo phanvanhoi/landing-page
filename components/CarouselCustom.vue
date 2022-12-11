@@ -42,8 +42,8 @@ export default {
             // } else {
             //     this.visibleSlide++;
             // }
-            const firstItem = this.slides[0];
-            this.slides = [firstItem, ...this.slides.slice(1)]
+            const lastItem = this.slides[this.slides.length - 1];
+            this.slides = [lastItem, ...this.slides.slice(0, -1)]
         },
         pre() {
             // if (this.visibleSlide <= 0) {
@@ -52,6 +52,7 @@ export default {
             //     this.visibleSlide--;
             // }
             const firstItem = this.slides[0];
+
             this.slides = [...this.slides.slice(1), firstItem]
         }
     }

@@ -7,6 +7,7 @@
       <Game></Game>
       <CarouselCustom></CarouselCustom>
       <AboutUs></AboutUs>
+      <CopyRight></CopyRight>
     </div>
     <!-- <Tutorial /> -->
   </div>
@@ -20,6 +21,7 @@ import AnimationImageGames from "~/components/AnimationImageGames.vue";
 import Game from "~/components/Game.vue";
 import CarouselCustom from "~/components/CarouselCustom.vue";
 import AboutUs from "~/components/AboutUs.vue";
+import CopyRight from "~/components/CopyRight.vue";
 // import Partners from "~/components/Partners.vue";
 export default Vue.extend([
   {
