@@ -1,18 +1,22 @@
 <template>
     <div class="carousel">
         <slot></slot>
-        <button @click="next" class="next">
-            <img :src="`${arrowSquareLeft}`" />
+        <button @click="next" class="next btn-action flex-item">
+            <NextIcon />
         </button>
-        <button @click="pre" class="pre">
-            <img :src="`${arrowSquareRight}`" />
+        <button @click="pre" class="pre btn-action flex-item">
+            <PreIcon />
         </button>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import NextIcon from "~/assets/svg/NextIcon.vue";
+import PreIcon from "~/assets/svg/PreIcon.vue";
 export default defineComponent({
     components: {
+        NextIcon,
+        PreIcon
     },
     data() {
         return {
@@ -33,25 +37,48 @@ export default defineComponent({
 <style lang="scss">
 .carousel {
     position: relative;
-
+    display: flex;
 
     button {
         position: absolute;
-        top: calc(50% - 20px);
+        top: calc(50% - calc(100vw / 55 /2));
     }
 
     button:active,
     button:hover {
         outline: none;
         cursor: pointer;
+
+    }
+
+    button:active {
+        opacity: 0.5;
+
     }
 
     .next {
-        right: 0;
+        right: -30px;
+
     }
 
     .pre {
-        left: 0;
+        left: -30px;
+
+    }
+
+    .btn-action {
+        width: calc(100vw / 55);
+        height: calc(100vw / 55);
+        border-radius: 10px;
+        border: none;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .flex-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 </style>

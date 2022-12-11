@@ -3,7 +3,7 @@
     'background-image': `url(${require('../static/BackgoundImage.png')})`,
   }">
     <div id="logo">
-      <LogoIcon />
+      <LogoIcon :width="150"/>
     </div>
     <div id="menu-header-container">
       <MenuHeader />

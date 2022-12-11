@@ -1,6 +1,6 @@
 
 <template>
-  <svg width="109" height="64" viewBox="0 0 109 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg :width="width || 109" :height="height || 64" viewBox="0 0 150 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M39.0405 63.7381L43.2125 46.2359H36.5426L37.4309 42.2729H55.3729L54.4988 46.2359H48.6731L44.5011 63.7381H39.0405Z"
       fill="white" />
@@ -28,6 +28,8 @@
 <script>
 export default {
   name: 'LogoIcon',
+  props:
+    ["width", "height"]
 }
 </script>
 <style scoped=>
