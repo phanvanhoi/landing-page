@@ -58,5 +58,26 @@ export default defineComponent({
         height: calc(100vw * (1 / 4.5));
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .animation-image-container {
+        width: 100vw;
+        height: 113vw;
+        padding: 0 4vw;
+        justify-content: end;
+
+        #img-illustrator {
+            width: 80vw;
+            height: 80vw;
+            position: absolute;
+            top: 8.5vw;
+        }
+
+        #img-map {
+            width: 100vw;
+            height: 33.3vw;
+        }
+    }
+}
 </style>
   
