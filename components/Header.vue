@@ -1,6 +1,6 @@
 <template>
   <div id="header" :style="{
-    'background-image': `url(${require('../static/BackgoundImage.png')})`,
+    'background-image': `url(${windowWidth > 576 ? require('../static/BackgoundImage.png') : require('../static/bg-mobile.png')})`,
   }">
     <div class="menu-header-logo-container">
       <div id="logo">
@@ -12,8 +12,8 @@
         <LanguagesDropdown />
       </div>
       <div v-show="windowWidth <= 576" class="menu-header-container">
-        <HamburgerIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 7.5"
-          :height="windowWidth > 576 ? windowWidth / 15 : windowWidth / 7.5" />
+        <HamburgerIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 10"
+          :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 10 / 1.75" />
       </div>
     </div>
     <div id="fairy-container" :style="{
@@ -230,10 +230,12 @@ export default defineComponent({
   }
 }
 
+
+
 @media only screen and (max-width: 576px) {
   #header {
     background-size: cover;
-    height: calc(130vw);
+    height: 167vw;
 
     .menu-header-logo-container {
       height: 15vw;
@@ -250,12 +252,37 @@ export default defineComponent({
       width: 100%;
       height: 100%;
       padding: 3vw;
+      padding-top: 28vw;
+      padding-bottom: 38vw;
       align-items: start;
 
       #countdown-container-content {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #description-games-detail-container {
+          width: 100%;
+
+          #input-email {
+            height: 60px;
+          }
+
+          #description-games-detail {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.9px;
+            color: #FFFFFF;
+            width: 100%;
+          }
+        }
 
         #description-games {
-          width: 70%;
+          width: 55%;
           color: #FFFFFF;
           margin-bottom: 0;
           font-family: 'Playfair Display';
@@ -267,8 +294,6 @@ export default defineComponent({
       }
     }
 
-
-
     #fairy-container {
       position: absolute;
       width: 45vw;
@@ -278,6 +303,30 @@ export default defineComponent({
       bottom: 0;
       left: 100px;
       background-size: 100vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  #header {
+
+    #countdown-container {
+      padding-top: 23vw;
+      padding-bottom: 37vw;
+
+      #countdown-container-content {
+
+        #description-games {
+          width: 63%;
+        }
+
+        #description-games-detail-container {
+
+          #input-email {
+            height: 50px;
+          }
+        }
+      }
     }
   }
 }
