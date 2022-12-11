@@ -79,5 +79,30 @@ export default {
     }
 
 }
+
+@media only screen and (max-width: 576px) {
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        padding: calc(100vw / 15) calc(100vw / 16);
+        flex-direction: column;
+        align-items: center;
+        background-color: #F6F6F6;
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 50px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.6px;
+            color: #000000;
+        }
+
+    }
+}
 </style>
   

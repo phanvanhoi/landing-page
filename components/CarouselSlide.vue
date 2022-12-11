@@ -91,5 +91,17 @@ export default {
         }
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .carousel-slide {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 53vw;
+        }
+    }
+}
 </style>
   

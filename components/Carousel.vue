@@ -81,5 +81,29 @@ export default defineComponent({
         justify-content: center;
     }
 }
+
+
+@media only screen and (max-width: 576px) {
+    .carousel {
+        .next {
+            right: 87vw;
+
+        }
+
+        .pre {
+            left: 87vw;
+
+        }
+
+        .btn-action {
+            width: 10vw;
+            height: 10vw;
+        }
+
+        button {
+            top: calc(50% - 5vw);
+        }
+    }
+}
 </style>
   
