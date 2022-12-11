@@ -1,6 +1,6 @@
 
 <template>
-    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg :width="width || 34" :height="height || 34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="url(#a)" d="M.333.333h33.333v33.333H.333z" />
         <defs>
@@ -16,6 +16,7 @@
 <script>
 export default {
     name: 'USFlagIcon',
+    props: ["width", "height"]
 }
 </script>
 <style scoped=>

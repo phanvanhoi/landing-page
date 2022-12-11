@@ -28,8 +28,7 @@
 <script>
 export default {
   name: 'LogoIcon',
-  props:
-    ["width", "height"]
+  props: ["width", "height"]
 }
 </script>
 <style scoped=>
