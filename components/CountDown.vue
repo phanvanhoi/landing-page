@@ -80,7 +80,6 @@ export default {
 #countdown-container-component {
     background: white;
     border: none;
-    height: calc(100vw / 12);
     width: 100%;
     border-radius: 21px;
 
@@ -119,6 +118,44 @@ export default {
             font-family: 'Playfair Display';
             font-style: normal;
         }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #countdown-container-component {
+        #template-countdount-container {
+            padding: 26px;
+
+            .template-countdount-container-items-number {
+                width: 54px;
+                height: 46px;
+                left: 0px;
+                top: 0px;
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 45px;
+                text-align: center;
+            }
+
+            .template-countdount-container-items-character {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: -0.651724px;
+                display: flex;
+                text-align: center;
+                color: #000000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
     }
 }
 </style>

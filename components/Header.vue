@@ -2,12 +2,19 @@
   <div id="header" :style="{
     'background-image': `url(${require('../static/BackgoundImage.png')})`,
   }">
-    <div id="logo">
-      <LogoIcon :width="150" />
-    </div>
-    <div id="menu-header-container">
-      <MenuHeader />
-      <LanguagesDropdown />
+    <div class="menu-header-logo-container">
+      <div id="logo">
+        <LogoIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 10"
+          :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 10 / 1.75" />
+      </div>
+      <div v-show="windowWidth > 576" class="menu-header-container">
+        <MenuHeader />
+        <LanguagesDropdown />
+      </div>
+      <div v-show="windowWidth <= 576" class="menu-header-container">
+        <HamburgerIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 7.5"
+          :height="windowWidth > 576 ? windowWidth / 15 : windowWidth / 7.5" />
+      </div>
     </div>
     <div id="fairy-container" :style="{
       'background-image': `url(${require('../static/Fairy.png')})`,
@@ -37,6 +44,7 @@
 import { defineComponent } from "vue";
 import LogoIcon from "~/assets/svg/LogoIcon.vue";
 import ArrowToRight from "~/assets/svg/ArrowToRight.vue";
+import HamburgerIcon from "~/assets/svg/HamburgerIcon.vue";
 import ArrowToBottom from "~/assets/svg/ArrowToBottom.vue";
 import MenuHeader from "~/components/MenuHeader.vue";
 import LanguagesDropdown from "~/components/LanguagesDropdown.vue";
@@ -45,10 +53,8 @@ export default defineComponent({
   components: {
     LogoIcon,
     ArrowToRight,
+    HamburgerIcon,
     ArrowToBottom
-  },
-  state: {
-    lang: "vi",
   },
   setup() {
     const handleButtonClick = (e) => {
@@ -58,16 +64,28 @@ export default defineComponent({
       handleButtonClick,
     };
   },
+  data() {
+    return {
+      windowWidth: window.innerWidth
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth
+    }
+  }
 });
 </script>
   
 <style lang="scss">
-@media only screen and (max-width: 992px) {
-  header {
-    background-color: lightblue;
-  }
-}
-
 #header {
   position: relative;
   width: 100vw;
@@ -76,11 +94,24 @@ export default defineComponent({
   background-position: center;
   background-size: cover;
 
-  #logo {
-    position: absolute;
-    top: calc(100vw * (1 / 24 / 4));
-    left: calc(100vw * (1 / 24));
+  .menu-header-logo-container {
+    height: calc(100vw / 18.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+
+    #logo {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
+
+
 
   #scroll-down-btn {
     position: absolute;
@@ -100,7 +131,7 @@ export default defineComponent({
   #countdown-container {
     margin: auto;
     width: calc(100vw * (1 / 2));
-    height: calc(100vw * (1 / 2));
+    height: calc(44vw);
     display: flex;
     align-items: end;
     z-index: 1;
@@ -152,15 +183,11 @@ export default defineComponent({
 
   }
 
-  #menu-header-container {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .menu-header-container {
     display: flex;
     align-items: center;
-    gap: 31px;
-    height: 100px;
-    padding-right: calc(100vw * (1 / 24) - 20px);
+    gap: calc(100vw / 24 / 2 - 13px);
+    height: calc(100vw / 19.2);
 
     .ant-menu {
       background: none;
@@ -182,7 +209,12 @@ export default defineComponent({
 
       .ant-menu-item,
       .ant-menu-submenu-title {
-        padding: 0px 43px;
+        padding: 0px calc(100vw / 24 / 2);
+        ;
+      }
+
+      .ant-menu-item {
+        font-size: calc(100vw /137.14285714286);
       }
     }
   }
@@ -195,6 +227,58 @@ export default defineComponent({
     left: 0;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #header {
+    background-size: cover;
+    height: calc(130vw);
+
+    .menu-header-logo-container {
+      height: 15vw;
+
+      #logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    #countdown-container {
+      width: 100%;
+      height: 100%;
+      padding: 3vw;
+      align-items: start;
+
+      #countdown-container-content {
+
+        #description-games {
+          width: 70%;
+          color: #FFFFFF;
+          margin-bottom: 0;
+          font-family: 'Playfair Display';
+          font-style: normal;
+          font-weight: 900;
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
+    }
+
+
+
+    #fairy-container {
+      position: absolute;
+      width: 45vw;
+      height: 45vw;
+      background-repeat: no-repeat;
+      background-size: contain;
+      bottom: 0;
+      left: 100px;
+      background-size: 100vw;
+    }
   }
 }
 </style>
