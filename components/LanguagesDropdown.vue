@@ -6,7 +6,7 @@
           <div class="done-icon-container">
             <DoneIcon />
           </div>
-          <VNFlagIcon />
+          <img :src="`${vnFlg}`" />
           Tiếng Việt
 
         </a-menu-item>
@@ -14,14 +14,14 @@
           <div class="done-icon-container">
             <!-- <DoneIcon /> -->
           </div>
-          <USFlagIcon />
+          <img :src="`${enFlag}`" />
           English
         </a-menu-item>
       </a-menu>
     </template>
-    <a-button class="app-button">
-      <VNFlagIcon />
-      <DownIcon />
+    <a-button class="app-button"  >
+      <img :src="`${vnFlg}`" />
+      <DownIcon :fill="'black'" />
     </a-button>
   </a-dropdown>
 </template>
@@ -39,6 +39,13 @@ export default defineComponent({
     USFlagIcon,
     DownIcon,
     DoneIcon,
+  },
+  props: ["activeBorder"],
+  data() {
+    return {
+      vnFlg: require('~/static/vietnam.png'),
+      enFlag: require('~/static/en.png'),
+    }
   },
   setup() {
     const handleButtonClick = (e) => {
@@ -75,7 +82,6 @@ export default defineComponent({
   border: none;
   display: flex;
   align-items: center;
-  gap: 15px;
 
   .ant-btn {
     border-color: none;
