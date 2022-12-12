@@ -8,13 +8,13 @@
                 </div>
             </div>
             <div class="draw-footer-container">
-                <h3>ABOUT US</h3>
+                <h3>{{ $t('header.about') }}</h3>
                 <hr />
-                <h3>GAMES</h3>
+                <h3>{{ $t('header.games') }}</h3>
                 <hr />
-                <h3>PARTNERS</h3>
+                <h3>{{ $t('header.partners') }}</h3>
                 <hr />
-                <h3>CONTACT US</h3>
+                <h3>{{ $t('header.contact') }}</h3>
             </div>
         </div>
     </div>

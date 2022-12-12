@@ -16,22 +16,16 @@
                 'background-image': `url(${require('../static/Item2.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.</h5>
+                    <h1>Kingland</h1>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div class="card-container" :style="{
                 'background-image': `url(${require('../static/Item3.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.</h5>
+                    <h1>The Last Game</h1>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <!-- start -->
@@ -39,29 +33,23 @@
                 'background-image': `url(${require('../static/Item4.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.</h5>
+                    <h1>G-Dragon</h1>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div v-show="windowWidth <= 576" class="card-container" :style="{
                 'background-image': `url(${require('../static/Item5.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.</h5>
+                    <h1>Pirates</h1>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div v-show="windowWidth <= 576" class="card-container" :style="{
                 'background-image': `url(${require('../static/Item6.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Witch Party</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -75,7 +63,7 @@
                 'background-image': `url(${require('../static/Item7.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Rocky</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -86,7 +74,7 @@
                 'background-image': `url(${require('../static/Item8.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Blue Fire</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -97,7 +85,7 @@
                 'background-image': `url(${require('../static/Item9.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Trau Vang</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -109,7 +97,7 @@
                 'background-image': `url(${require('../static/Item10.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Aborigines</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -120,7 +108,7 @@
                 'background-image': `url(${require('../static/Item11.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Cinderella</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -131,7 +119,7 @@
                 'background-image': `url(${require('../static/Item12.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Egypt Game</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -145,7 +133,7 @@
                 'background-image': `url(${require('../static/Item4.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>G-Dragon</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -156,7 +144,7 @@
                 'background-image': `url(${require('../static/Item5.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Pirates</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -167,7 +155,7 @@
                 'background-image': `url(${require('../static/Item6.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Witch Party</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -180,7 +168,7 @@
                 'background-image': `url(${require('../static/Item10.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Aborigines</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -191,7 +179,7 @@
                 'background-image': `url(${require('../static/Item11.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Cinderella</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -202,7 +190,7 @@
                 'background-image': `url(${require('../static/Item12.png')})`,
             }">
                 <div class="description">
-                    <h1>E-Space</h1>
+                    <h1>Egypt Game</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et

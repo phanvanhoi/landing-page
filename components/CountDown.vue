@@ -24,22 +24,22 @@
                 <div id="template-countdount-container">
                     <div class="time-container">
                         <span class="template-countdount-container-items-number">{{ scope.props.days }}</span>
-                        <span class="template-countdount-container-items-character">Ngày</span>
+                        <span class="template-countdount-container-items-character">{{ $t('CountDown.Days') }}</span>
                     </div>
                     <span class="template-countdount-container-items-number">:</span>
                     <div class="time-container">
                         <span class="template-countdount-container-items-number">{{ scope.props.hours }}</span>
-                        <span class="template-countdount-container-items-character">Giờ</span>
+                        <span class="template-countdount-container-items-character">{{ $t('CountDown.Hours') }}</span>
                     </div>
                     <span class="template-countdount-container-items-number">:</span>
                     <div class="time-container">
                         <span class="template-countdount-container-items-number">{{ scope.props.minutes }}</span>
-                        <span class="template-countdount-container-items-character">Phút</span>
+                        <span class="template-countdount-container-items-character">{{ $t('CountDown.Minutes') }}</span>
                     </div>
                     <span class="template-countdount-container-items-number">:</span>
                     <div class="time-container">
                         <span class="template-countdount-container-items-number">{{ scope.props.seconds }}</span>
-                        <span class="template-countdount-container-items-character">Giây</span>
+                        <span class="template-countdount-container-items-character">{{ $t('CountDown.Second') }}</span>
                     </div>
                 </div>
             </template>

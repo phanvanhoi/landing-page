@@ -1,10 +1,8 @@
 <template>
     <div class="games-container">
         <div class="description-header">
-            <h1 class="about-title-name">Trò chơi</h1>
-            <h5 class="about-descripstion">Là nhà tiên phong trong lĩnh vực trò chơi ứng dụng dành cho thiết bị di động,
-                chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại có
-                cốt truyện tuyệt vời, hiệu ứng âm thanh giật gân và hoạt ảnh hoành tráng không ngừng gây ấn tượng.</h5>
+            <h1 class="about-title-name">{{ $t('Games.title') }}</h1>
+            <h5 class="about-descripstion">{{ $t('Games.descripstion') }}</h5>
         </div>
         <CardList />
     </div>

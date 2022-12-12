@@ -28,11 +28,10 @@
       }"></div>
       <div id="countdown-container">
         <div id="countdown-container-content">
-          <h1 id="description-games">Trò chơi sắp ra mắt</h1>
+          <h1 id="description-games">{{ $t('Header.description-games') }}</h1>
           <CountDown></CountDown>
           <div id="description-games-detail-container">
-            <h1 id="description-games-detail">Chúng tôi sẽ trở lại với một điều tuyệt vời. Để nhận các bản cập nhật mới
-              nhất về tròchơi, vui lòng đăng ký nhận bản tin của chúng tôi.</h1>
+            <h1 id="description-games-detail">{{ $t('Header.description-games-detail') }}</h1>
             <a-input id="input-email" v-model:value="email" placeholder="Địa chỉ email của bạn">
               <template #suffix>
                 <ArrowToRight :width="`${windowWidth > 576 ? windowWidth / 30 : 25}`"

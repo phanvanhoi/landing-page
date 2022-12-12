@@ -17,24 +17,24 @@
     <div class="right-container">
       <div class="flex-1">
         <!-- address -->
-        <h1>Address</h1>
+        <h1>{{ $t('AboutUs.address') }}</h1>
         <div class="address-container">
           <div class="info-bottom-container pd-b-48">
             <PointPlaceIcon />
             <div class="info-bottom-description-container">
-              <h3>Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</h3>
-              <h3>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</h3>
+              <h3>{{ $t('AboutUs.info-bottom-description-container') }}</h3>
+              <h3>{{ $t('AboutUs.info-bottom-description-container-1') }}</h3>
             </div>
           </div>
           <div class="info-bottom-container">
             <PhoneIcon />
-            <h3>(+1) 555-0108-000 or (+236) 555-0108</h3>
+            <h3>{{ $t('AboutUs.phone') }}</h3>
           </div>
         </div>
       </div>
       <div class="flex-1">
-        <h1>Subscribe</h1>
-        <h3>Subscribe to our newsletter and be the first to know about our updates</h3>
+        <h1>{{ $t('AboutUs.subscribe') }}</h1>
+        <h3>{{ $t('AboutUs.description') }}</h3>
         <a-input id="input-email" v-model:value="email" placeholder="Địa chỉ email của bạn">
           <template #suffix>
             <ArrowToRightWhite />

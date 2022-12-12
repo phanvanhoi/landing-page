@@ -20,5 +20,27 @@
     "left-about-content-detail-container-h5-2": "Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo.",
     "left-about-content-detail-container-h1-3": "Đội Ngũ",
     "left-about-content-detail-container-h5-3": "Etech là một studio quốc tế, từng đoạt giải thưởng gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất chuyên tạo ra nội dung cho những tên tuổi lớn nhất trong lĩnh vực điện ảnh và trò chơi điện tử."
+  },
+  "AboutUs": {
+    "address": "Địa chỉ",
+    "info-bottom-description-container": "Valletta Buildings, South Street, Valletta - VLT 1103 Malta, Mỹ",
+    "info-bottom-description-container-1": "Số 20 đường Phan Đăng Lưu, quận Hải Châu, thành phố Đà Nẵng, Việt Nam",
+    "phone": "(+1) 555-0108-000 hoặc (+236) 555-0108",
+    "subscribe": "Theo dõi",
+    "description": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi"
+  },
+  "CountDown": {
+    "Days": "Ngày",
+    "Hours": "Giờ",
+    "Minutes": "Phút",
+    "Second": "Giây"
+  },
+  "Games": {
+    "title": "Trò chơi",
+    "descripstion": "Là nhà tiên phong trong lĩnh vực trò chơi ứng dụng dành cho thiết bị di động, chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại có cốt truyện tuyệt vời, hiệu ứng âm thanh giật gân và hoạt ảnh hoành tráng không ngừng gây ấn tượng."
+  },
+  "Header": {
+    "description-games": "Trò chơi sắp ra mắt",
+    "description-games-detail": "Chúng tôi sẽ trở lại với một điều tuyệt vời. Để nhận các bản cập nhật mới nhất về trò chơi, vui lòng đăng ký nhận bản tin của chúng tôi."
   }
 }
