@@ -41,17 +41,17 @@
           </div>
         </div>
       </div>
-      <a href="#copy-right-container">
-        <div id="scroll-down-btn">
-          <ArrowToBottom :width="`${windowWidth / 50}`" :height="`${windowWidth / 50}`" />
-        </div>
-      </a>
     </div>
     <div v-show="windowWidth <= 576" class="fairy-mobile-container">
       <div id="fairy-container" :style="{
         'background-image': `url(${require('../static/Fairy2.png')})`,
       }"></div>
     </div>
+    <!-- <a href="#copy-right-container">
+      <div id="scroll-down-btn">
+        <ArrowToBottom :width="`${windowWidth / 50}`" :height="`${windowWidth / 50}`" />
+      </div>
+    </a> -->
   </div>
 </template>
   
@@ -134,23 +134,6 @@ export default defineComponent({
       justify-content: center;
       align-items: center;
     }
-  }
-
-
-
-  #scroll-down-btn {
-    position: absolute;
-    bottom: calc(100vw * (1 / 24 / 4));
-    right: calc(100vw * (1 / 24));
-    width: calc(100vw * (1 / 30));
-    height: calc(100vw * (1 / 30));
-    border-radius: 50%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   #countdown-container {
@@ -255,6 +238,7 @@ export default defineComponent({
     background-size: contain;
   }
 }
+
 
 
 
