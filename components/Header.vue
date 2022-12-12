@@ -124,8 +124,6 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     padding-left: 5vw;
-    padding-right: 5vw;
-
 
     #logo {
       height: 100%;
