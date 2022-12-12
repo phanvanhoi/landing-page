@@ -46,7 +46,7 @@
 </template>
   
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import LogoIcon from "~/assets/svg/LogoIcon.vue";
 import TwitterIcon from "~/assets/svg/TwitterIcon.vue";
 import FacebookIcon from "~/assets/svg/FacebookIcon.vue";
@@ -66,9 +66,7 @@ export default defineComponent({
     ArrowToRightWhite
   },
   setup() {
-    const current = ref(['mail']);
     return {
-      current,
       windowWidth: window.innerWidth,
     };
   },

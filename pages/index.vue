@@ -2,8 +2,10 @@
   <div>
     <div id="app">
       <Header></Header>
-      <a href="#copy-right-container">
-        <div id="scroll-down-btn">
+      <a class="right-position" href="#copy-right-container">
+        <div id="scroll-down-btn" :style="{
+          'background-image': `url(${require('../static/DownIcon.png')})`,
+        }" class="transform-item">
           <ArrowToBottom :width="100" :height="`${100}`" />
         </div>
       </a>
@@ -32,32 +34,39 @@ import ArrowToBottom from "~/assets/svg/ArrowToBottom.vue";
 export default Vue.extend([
   {
     name: "IndexPage",
-    components: {
-      ArrowToBottom,
+    data: function () {
+      return {
+        firstName: window,
+      }
     },
-  },
+  }
 ]);
 </script>
+
 <style lang="scss">
 html {
   scroll-behavior: smooth;
 }
 
 #scroll-down-btn {
-  position: absolute;
-  bottom: calc(100vw * (1 / 24 / 4));
-  right: calc(100vw * (1 / 24));
   width: calc(100vw * (1 / 30));
   height: calc(100vw * (1 / 30));
   border-radius: 50%;
   background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transform: matrix(-1, 0, 0, 1, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 140px;
+  left: 93vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.transform-item {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 </style>

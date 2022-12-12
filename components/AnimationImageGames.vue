@@ -10,7 +10,7 @@
 </template>
   
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import PlusIcon from "~/assets/svg/PlusIcon.vue"
 import PenToolIcon from "~/assets/svg/PenToolIcon.vue"
 import PeopleIcon from "~/assets/svg/PeopleIcon.vue"
@@ -27,10 +27,6 @@ export default defineComponent({
         }
     },
     setup() {
-        const current = ref<string[]>(['mail']);
-        return {
-            current,
-        };
     },
 });
 </script>

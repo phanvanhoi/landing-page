@@ -17,7 +17,8 @@
             }">
                 <div class="description">
                     <h1>Kingland</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div class="card-container" :style="{
@@ -25,7 +26,8 @@
             }">
                 <div class="description">
                     <h1>The Last Game</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <!-- start -->
@@ -34,7 +36,8 @@
             }">
                 <div class="description">
                     <h1>G-Dragon</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div v-show="windowWidth <= 576" class="card-container" :style="{
@@ -42,7 +45,8 @@
             }">
                 <div class="description">
                     <h1>Pirates</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div v-show="windowWidth <= 576" class="card-container" :style="{
@@ -204,7 +208,7 @@
 </template>
   
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import PlusIcon from "~/assets/svg/PlusIcon.vue"
 import CalendarTickIcon from "~/assets/svg/CalendarTickIcon.vue"
 import PenToolIcon from "~/assets/svg/PenToolIcon.vue"
@@ -217,9 +221,7 @@ export default defineComponent({
         PeopleIcon
     },
     setup() {
-        const current = ref<string[]>(['mail']);
         return {
-            current,
             windowWidth: window.innerWidth,
         };
     },

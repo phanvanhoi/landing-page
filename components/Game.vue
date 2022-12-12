@@ -9,7 +9,7 @@
 </template>
   
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import PlusIcon from "~/assets/svg/PlusIcon.vue"
 import CalendarTickIcon from "~/assets/svg/CalendarTickIcon.vue"
 import PenToolIcon from "~/assets/svg/PenToolIcon.vue"
@@ -24,10 +24,6 @@ export default defineComponent({
         CardList
     },
     setup() {
-        const current = ref<string[]>(['mail']);
-        return {
-            current,
-        };
     },
 });
 </script>

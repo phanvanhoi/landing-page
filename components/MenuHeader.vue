@@ -21,7 +21,7 @@ export default defineComponent({
     components: {
     },
     setup() {
-        const current = ref<string[]>(['mail']);
+        const current = ref(['mail']);
         return {
             current,
         };
