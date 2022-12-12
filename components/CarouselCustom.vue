@@ -2,9 +2,12 @@
     <div class="carousel-container">
         <h1>Our Partners</h1>
         <carousel @next="next" @pre="pre">
-            <carousel-slide v-for="(slide, index) in slides" :key="index" :index="index" :visibleSlide="visibleSlide">
-                <img :src="`${slide.url}`" />
-            </carousel-slide>
+            <div class="carousel-content-container">
+                <carousel-slide v-for="(slide, index) in slides" :key="index" :index="index"
+                    :visibleSlide="visibleSlide">
+                    <img :src="`${slide.url}`" />
+                </carousel-slide>
+            </div>
         </carousel>
     </div>
 </template>
@@ -67,16 +70,22 @@ export default {
     align-items: center;
     background-color: #F6F6F6;
 
-    h1 {
-        font-size: calc(100vw * (1 / 24));
-        line-height: calc(100vw * (1 / 24));
-        margin-bottom: calc(100vw * (1 / 24 / 2));
-        color: black;
-        font-weight: bold;
-        font-family: 'Playfair Display';
-        font-style: normal;
-        margin-bottom: calc(100vw * (1 / 24));
+    .carousel-content-container {
+        display: flex;
+
+        h1 {
+            font-size: calc(100vw * (1 / 24));
+            line-height: calc(100vw * (1 / 24));
+            margin-bottom: calc(100vw * (1 / 24 / 2));
+            color: black;
+            font-weight: bold;
+            font-family: 'Playfair Display';
+            font-style: normal;
+            margin-bottom: calc(100vw * (1 / 24));
+        }
     }
+
+
 
 }
 
@@ -88,20 +97,27 @@ export default {
         flex-direction: column;
         align-items: center;
         background-color: #F6F6F6;
+        width: 100%;
+        overflow: hidden;
+        height: 70vw;
 
-        h1 {
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 40px;
-            line-height: 50px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            letter-spacing: 0.6px;
-            color: #000000;
+        .carousel-content-container {
+            position: absolute;
+            left: -28vw;
+
+            h1 {
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 50px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.6px;
+                color: #000000;
+            }
         }
-
     }
 }
 </style>

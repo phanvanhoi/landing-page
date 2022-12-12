@@ -85,13 +85,15 @@ export default defineComponent({
 
 @media only screen and (max-width: 576px) {
     .carousel {
+        width: 100vw;
+
         .next {
-            right: 87vw;
+            right: 3vw;
 
         }
 
         .pre {
-            left: 87vw;
+            left: 3vw;
 
         }
 
@@ -101,7 +103,7 @@ export default defineComponent({
         }
 
         button {
-            top: calc(50% - 5vw);
+            top: calc(50%  + 5vw);
         }
     }
 }

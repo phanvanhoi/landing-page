@@ -5,18 +5,17 @@
     }">
       <div class="menu-header-logo-container">
         <div id="logo">
-          <LogoIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 10"
-            :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 10 / 1.75" />
+          <LogoIcon :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 5"
+            :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 5 / 1.75" />
         </div>
         <div v-show="windowWidth > 576" class="menu-header-container">
           <MenuHeader />
           <LanguagesDropdown />
         </div>
         <div v-show="windowWidth <= 576" class="menu-header-container" @click="handleShowMenuMobile">
-          <HamburgerIcon v-show="!isShowMenuMobile" :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 10"
-            :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 10 / 1.75" />
+          <HamburgerIcon v-show="!isShowMenuMobile" :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 5"
+            :height="windowWidth > 576 ? windowWidth / 15 / 1.75 : windowWidth / 5 / 1.75" />
           <div v-show="windowWidth < 576 && isShowMenuMobile" class="menu-header-container">
-            a {{ isShowMenuMobile }}
             <Draw @handleHideMenuMobile="handleHideMenuMobile" />
           </div>
         </div>
@@ -36,7 +35,8 @@
               nhất về tròchơi, vui lòng đăng ký nhận bản tin của chúng tôi.</h1>
             <a-input id="input-email" v-model:value="email" placeholder="Địa chỉ email của bạn">
               <template #suffix>
-                <ArrowToRight />
+                <ArrowToRight :width="`${windowWidth > 576 ? windowWidth / 30 : 25}`"
+                  :height="`${windowWidth >= 576 ? windowWidth / 30 : 25}`" />
               </template>
             </a-input>
           </div>
@@ -177,7 +177,8 @@ export default defineComponent({
 
         #input-email {
           border-radius: 10px;
-          height: calc(100vw * (1 / 30));
+          height: 5vw;
+          font-size: calc(100vw / 48);
         }
 
         #description-games-detail {
