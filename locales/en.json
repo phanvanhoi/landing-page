@@ -42,5 +42,6 @@
   "Header": {
     "description-games": "We’re Getting Ready",
     "description-games-detail": "We will back to something amazing. Getting the latest updates about our games. Please sign up to our newsletter."
-  }
+  },
+  "emailPlaceHolder": "Enter your email"
 }

@@ -10,7 +10,7 @@
         </div>
         <div v-show="windowWidth > 576" class="menu-header-container">
           <MenuHeader />
-          <LanguagesDropdown />
+          <LanguagesDropdown :localed="localed" />
         </div>
         <div v-show="windowWidth <= 576" class="menu-header-container" @click="handleShowMenuMobile">
           <HamburgerIcon v-show="!isShowMenuMobile" :width="windowWidth > 576 ? windowWidth / 15 : windowWidth / 5"
@@ -32,7 +32,7 @@
           <CountDown></CountDown>
           <div id="description-games-detail-container">
             <h1 id="description-games-detail">{{ $t('Header.description-games-detail') }}</h1>
-            <a-input id="input-email" v-model:value="email" placeholder="Địa chỉ email của bạn">
+            <a-input id="input-email" v-model:value="email" :placeholder="`${$t('emailPlaceHolder')}`">
               <template #suffix>
                 <ArrowToRight :width="`${windowWidth > 576 ? windowWidth / 30 : 25}`"
                   :height="`${windowWidth >= 576 ? windowWidth / 30 : 25}`" />
@@ -85,12 +85,13 @@ export default defineComponent({
     return {
       windowWidth: window.innerWidth,
       isShowMenuMobile: false,
-
+      localed: true
     }
   },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
+      this.localed = this.$route.path.toString().includes('en');
     })
   },
   beforeDestroy() {
@@ -125,6 +126,7 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     padding-left: 5vw;
+    padding-right: 2vw;
 
     #logo {
       height: 100%;
@@ -283,6 +285,7 @@ export default defineComponent({
 
     .menu-header-logo-container {
       height: 15vw;
+      padding-right: 0;
 
       #logo {
         height: 100%;

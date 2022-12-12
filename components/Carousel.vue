@@ -67,9 +67,9 @@ export default defineComponent({
     }
 
     .btn-action {
-        width: calc(100vw / 55);
-        height: calc(100vw / 55);
-        border-radius: 10px;
+        width: 2.5vw;
+        height: 2.5vw;
+        border-radius: 5px;
         border: none;
         background: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);

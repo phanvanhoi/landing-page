@@ -35,7 +35,7 @@
       <div class="flex-1">
         <h1>{{ $t('AboutUs.subscribe') }}</h1>
         <h3>{{ $t('AboutUs.description') }}</h3>
-        <a-input id="input-email" v-model:value="email" placeholder="Địa chỉ email của bạn">
+        <a-input id="input-email" v-model:value="email" :placeholder="`${$t('emailPlaceHolder')}`">
           <template #suffix>
             <ArrowToRightWhite />
           </template>

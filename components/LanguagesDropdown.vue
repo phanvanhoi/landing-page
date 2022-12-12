@@ -3,19 +3,23 @@
     <template #overlay>
       <a-menu id="menu-item-container">
         <nuxt-link :to="localePath('/', 'vi')">
-          <a-menu-item key="vi" class="item-dropdown bg-b">
-            <div class="done-icon-container">
+          <a-menu-item :key="localed" class="item-dropdown bg-b">
+            <div v-if="localed" class="done-icon-container">
+            </div>
+            <div v-else class="done-icon-container">
               <DoneIcon />
             </div>
             <img :src="`${vnFlg}`" />
             Tiếng Việt
-
+            {{ located }}
           </a-menu-item>
         </nuxt-link>
         <nuxt-link :to="localePath('/', 'en')">
-          <a-menu-item key="en" class="item-dropdown">
-            <div class="done-icon-container">
-              <!-- <DoneIcon /> -->
+          <a-menu-item :key="localed" class="item-dropdown">
+            <div v-if="localed" class="done-icon-container">
+              <DoneIcon />
+            </div>
+            <div v-else class="done-icon-container">
             </div>
             <img :src="`${enFlag}`" />
             English
@@ -25,14 +29,19 @@
       </a-menu>
     </template>
     <a-button class="app-button">
-      <img :src="`${vnFlg}`" />
+      <div v-if="localed">
+        <img :src="`${enFlag}`" />
+      </div>
+      <div v-else>
+        <img :src="`${vnFlg}`" />
+      </div>
       <DownIcon :fill="'black'" />
     </a-button>
   </a-dropdown>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, forceComponent } from "vue";
 import { mapState, mapActions, mapMutations } from "vuex";
 import VNFlagIcon from "~/assets/svg/VNFlagIcon.vue";
 import USFlagIcon from "~/assets/svg/USFlagIcon.vue";
@@ -46,7 +55,7 @@ export default defineComponent({
     DownIcon,
     DoneIcon,
   },
-  props: ["activeBorder"],
+  props: ["activeBorder", "localed"],
   computed: mapState(["locale"])
   ,
   methods: {
@@ -59,22 +68,6 @@ export default defineComponent({
       enFlag: require('~/static/en.png'),
     }
   },
-  setup() {
-  },
-  mounted() {
-
-  }
-  // computed: {
-  //   ...mapState({
-  //     locale: (state) => state?.locale,
-  //   }),
-  // },
-  // methods: {
-  //   ...mapActions(["changLanguages"]),
-  //   handleMenuClick() {
-  //     this.changLanguages("vi");
-  //   },
-  // },
 });
 </script>
 
