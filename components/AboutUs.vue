@@ -5,7 +5,7 @@
     <div class="left-container">
       <div class="left-icon-container">
         <!-- logo -->
-        <LogoIcon :width="230" :height="104" />
+        <LogoIcon :width="`${windowWidth > 576 ? 230 : 190}`" :height="104" />
         <div class="listlogo-container">
           <!-- listlogo -->
           <TwitterIcon />
@@ -46,7 +46,7 @@
 </template>
   
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from 'vue';
 import LogoIcon from "~/assets/svg/LogoIcon.vue";
 import TwitterIcon from "~/assets/svg/TwitterIcon.vue";
 import FacebookIcon from "~/assets/svg/FacebookIcon.vue";
@@ -66,8 +66,25 @@ export default defineComponent({
     ArrowToRightWhite
   },
   setup() {
-
+    const current = ref(['mail']);
+    return {
+      current,
+      windowWidth: window.innerWidth,
+    };
   },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth
+    }
+  }
 });
 </script>
   
@@ -141,6 +158,72 @@ export default defineComponent({
 
   .pd-b-48 {
     padding-bottom: calc(100vw / 48);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #bottom-about-us-container {
+    flex-direction: column;
+    align-items: self-start;
+    padding: 10vw 5vw;
+    gap: 15vw;
+
+    .left-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .left-icon-container {
+        gap: 10vw;
+
+        .listlogo-container {
+          justify-content: space-between;
+        }
+      }
+
+    }
+
+    .right-container {
+      width: 100%;
+      flex-direction: column;
+      gap: 15vw;
+
+      .address-container {
+        gap: 3vw;
+      }
+
+      .info-bottom-container {
+        gap: 3vw;
+
+        .info-bottom-description-container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    h1,
+    h3 {
+      color: #fff;
+    }
+
+    h3 {
+      font-weight: 200;
+      margin-bottom: 5vw;
+    }
+
+    #input-email {
+      height: 15vw;
+    }
+
+    .flex-1 {
+      width: 100%;
+    }
+
+    .pd-b-48 {
+      padding-bottom: calc(100vw / 48);
+    }
   }
 }
 </style>
