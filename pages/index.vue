@@ -29,3 +29,8 @@ export default Vue.extend([
   },
 ]);
 </script>
+<style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+</style>

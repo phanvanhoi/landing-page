@@ -79,11 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div>
-
-            </div>
         </div>
-
     </div>
 </template>
   
@@ -130,13 +126,15 @@ export default defineComponent({
 <style lang="scss">
 .about-container {
     width: 100vw;
-    padding: calc(100vw * (1 / 12)) calc(100vw * (1 / 5));
+    padding: calc(100vw * (1 / 12)) calc(20vw);
+    display: flex;
 
     .about-content-container {
         display: flex;
         align-items: start;
         gap: calc(100vw * (1 / 24 / 2));
         justify-content: center;
+        justify-content: space-between;
 
         .flex-1 {
             flex: 1;
@@ -254,6 +252,20 @@ export default defineComponent({
     }
 
 }
+
+@media only screen and (max-width: 1130px) {
+    .about-container {
+        padding: calc(100vw * (1 / 12)) calc(10vw);
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    .about-container {
+        padding: calc(100vw * (1 / 12)) calc(5vw);
+    }
+}
+
 
 @media only screen and (max-width: 576px) {
     .about-container {

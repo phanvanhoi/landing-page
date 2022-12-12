@@ -1,5 +1,5 @@
 <template>
-    <div class="copy-right-container">
+    <div id="copy-right-container" class="copy-right-container">
         <h2>2017 Copyright. Policy.</h2>
     </div>
 </template>

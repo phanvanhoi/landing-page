@@ -42,9 +42,11 @@
           </div>
         </div>
       </div>
-      <div id="scroll-down-btn">
-        <ArrowToBottom />
-      </div>
+      <a href="#copy-right-container">
+        <div id="scroll-down-btn">
+          <ArrowToBottom :width="`${windowWidth / 50}`" :height="`${windowWidth / 50}`" />
+        </div>
+      </a>
     </div>
     <div v-show="windowWidth <= 576" class="fairy-mobile-container">
       <div id="fairy-container" :style="{
