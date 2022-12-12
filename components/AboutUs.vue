@@ -148,7 +148,7 @@ export default defineComponent({
 
   #input-email {
     border-radius: 10px;
-    height: 6vw;
+    height: calc(100vw * (1 / 10));
     background: none;
   }
 
@@ -215,6 +215,7 @@ export default defineComponent({
 
     #input-email {
       height: 15vw;
+      font-size: 4vw;
     }
 
     .flex-1 {

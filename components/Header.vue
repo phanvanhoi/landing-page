@@ -311,6 +311,7 @@ export default defineComponent({
 
           #input-email {
             height: 60px;
+            font-size: 4vw;
           }
 
           #description-games-detail {
