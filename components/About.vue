@@ -2,27 +2,22 @@
     <div class="about-container">
         <div class="about-content-container">
             <div class="flex-1">
-                <h1 class="about-title-name">Về chúng tôi</h1>
-                <h5 class="about-descripstion">Duyệt qua tuyển chọn các trò chơi trực tuyến miễn phí của chúng tôi và có
-                    một khoảng thời gian tuyệt
-                    vời mà không cần rời khỏi trang web! Tùy chọn Trò chơi dành cho Trẻ em của chúng tôi cũng bao gồm
-                    các bài đánh giá trò chơi, các trò chơi gian lận và hướng dẫn mở rộng, và nhiều hơn nữa. Chúng tôi
-                    cũng có các bản tải xuống, video và bài báo miễn phí độc quyền. Etech đánh giá các trò chơi trẻ em
-                    phổ biến nhất từ tất cả các nền tảng trò chơi điện tử phổ biến nhất, vì vậy bạn không cần phải tìm
-                    kiếm niềm vui ở bất kỳ nơi nào khác trên Internet. Khám phá một thế giới trò chơi hoàn toàn mới trên
-                    Etech.</h5>
+                <h1 class="about-title-name"> {{ $t('About.about-title-name') }}</h1>
+                <h5 class="about-descripstion">{{ $t('About.about-descripstion') }}</h5>
                 <div class="number-of-people-main-container">
                     <div class="number-of-people-container">
                         <div class="number-of-people-content-container">
                             <h1 class="number-of-people-h1">600</h1>
                             <div class="number-of-people-h5-container">
-                                <h5 class="number-of-people-h5">{{ windowWidth > 576 ? 'M' : 'Triệu' }}</h5>
+                                <h5 class="number-of-people-h5">{{ windowWidth > 576 ? 'M' :
+                                        $t('About.number-of-people-h5')
+                                }}</h5>
                             </div>
                             <div class="number-of-people-icon-container">
                                 <PlusIcon />
                             </div>
                         </div>
-                        <h2 class="number-of-people-h2">Người chơi</h2>
+                        <h2 class="number-of-people-h2">{{ $t('About.number-of-people-h2') }}</h2>
                     </div>
                     <div class="number-of-people-container">
                         <div class="number-of-people-content-container">
@@ -31,7 +26,7 @@
                                 <PlusIcon />
                             </div>
                         </div>
-                        <h2 class="number-of-people-h2">Trò chơi</h2>
+                        <h2 class="number-of-people-h2">{{ $t('About.number-of-people-h2-2') }}</h2>
                     </div>
                 </div>
 
@@ -45,8 +40,8 @@
                         </div>
                         <!-- Content -->
                         <div class="left-about-content-detail-container">
-                            <h1>Truy Cập 24/7</h1>
-                            <h5>Đảm bảo hoạt động kinh doanh của các nhà khai thác hoạt động trơn tru suốt cả năm.</h5>
+                            <h1>{{ $t('About.left-about-content-detail-container-h1') }}</h1>
+                            <h5>{{ $t('About.left-about-content-detail-container-h5') }}</h5>
                         </div>
                     </div>
                     <div class="left-about-content-container">
@@ -56,11 +51,8 @@
                         </div>
                         <!-- Content -->
                         <div class="left-about-content-detail-container">
-                            <h1>Thiết Kế</h1>
-                            <h5>Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò
-                                chơi
-                                của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo.
-                            </h5>
+                            <h1>{{ $t('About.left-about-content-detail-container-h1-2') }}</h1>
+                            <h5>{{ $t('About.left-about-content-detail-container-h5-2') }}</h5>
                         </div>
                     </div>
                     <div class="left-about-content-container">
@@ -70,11 +62,8 @@
                         </div>
                         <!-- Content -->
                         <div class="left-about-content-detail-container">
-                            <h1>Đội Ngũ</h1>
-                            <h5>Etech là một studio quốc tế, từng đoạt giải thưởng gồm các nhà thiết kế, nghệ sĩ, họa sĩ
-                                hoạt hình và nhà sản xuất chuyên tạo ra nội dung cho những tên tuổi lớn nhất trong lĩnh
-                                vực
-                                điện ảnh và trò chơi điện tử.</h5>
+                            <h1>{{ $t('About.left-about-content-detail-container-h1-3') }}</h1>
+                            <h5>{{ $t('About.left-about-content-detail-container-h5-4') }}</h5>
                         </div>
                     </div>
                 </div>
@@ -232,6 +221,7 @@ export default defineComponent({
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        margin-top: 1vw;
                     }
 
                     .left-about-content-detail-container {

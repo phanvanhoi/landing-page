@@ -1,25 +1,30 @@
 <template>
   <a-dropdown id="container">
     <template #overlay>
-      <a-menu @click="handleMenuClick" id="menu-item-container">
-        <a-menu-item key="vi" class="item-dropdown bg-b">
-          <div class="done-icon-container">
-            <DoneIcon />
-          </div>
-          <img :src="`${vnFlg}`" />
-          Tiếng Việt
+      <a-menu id="menu-item-container">
+        <nuxt-link :to="localePath('/', 'vi')">
+          <a-menu-item key="vi" class="item-dropdown bg-b">
+            <div class="done-icon-container">
+              <DoneIcon />
+            </div>
+            <img :src="`${vnFlg}`" />
+            Tiếng Việt
 
-        </a-menu-item>
-        <a-menu-item key="en" class="item-dropdown">
-          <div class="done-icon-container">
-            <!-- <DoneIcon /> -->
-          </div>
-          <img :src="`${enFlag}`" />
-          English
-        </a-menu-item>
+          </a-menu-item>
+        </nuxt-link>
+        <nuxt-link :to="localePath('/', 'en')">
+          <a-menu-item key="en" class="item-dropdown">
+            <div class="done-icon-container">
+              <!-- <DoneIcon /> -->
+            </div>
+            <img :src="`${enFlag}`" />
+            English
+          </a-menu-item>
+        </nuxt-link>
+
       </a-menu>
     </template>
-    <a-button class="app-button"  >
+    <a-button class="app-button">
       <img :src="`${vnFlg}`" />
       <DownIcon :fill="'black'" />
     </a-button>
@@ -28,6 +33,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import { mapState, mapActions, mapMutations } from "vuex";
 import VNFlagIcon from "~/assets/svg/VNFlagIcon.vue";
 import USFlagIcon from "~/assets/svg/USFlagIcon.vue";
 import DownIcon from "~/assets/svg/DownIcon.vue";
@@ -41,6 +47,12 @@ export default defineComponent({
     DoneIcon,
   },
   props: ["activeBorder"],
+  computed: mapState(["locale"])
+  ,
+  methods: {
+    ...mapActions(['changLanguages'])
+  }
+  ,
   data() {
     return {
       vnFlg: require('~/static/vietnam.png'),
@@ -48,16 +60,6 @@ export default defineComponent({
     }
   },
   setup() {
-    const handleButtonClick = (e) => {
-      console.log("click left button", e);
-    };
-    const handleMenuClick = (e) => {
-      console.log("click", e);
-    };
-    return {
-      handleButtonClick,
-      handleMenuClick,
-    };
   },
   mounted() {
 
